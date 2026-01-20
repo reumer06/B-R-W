@@ -1,11 +1,12 @@
 TARGET = main
-SOURCE = main.c
-CC = gcc
+SOURCE = main.cpp
+CXX = g++
+CXXFLAGS = -Wall -O2
 
 all: $(TARGET)
 
 $(TARGET): $(SOURCE)
-	$(CC) $(SOURCE) -o $(TARGET) -lm
+	$(CXX) $(CXXFLAGS) $(SOURCE) -o $(TARGET)
 
 clean:
 	rm -f $(TARGET)
